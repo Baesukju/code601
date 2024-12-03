@@ -57,7 +57,7 @@ jobs: # 수행할 내용
       run: |
         sed -i "s@ \
         image: ${{ env.DOCKER_REGISTRY }}/${{ env.DOCKER_REPOSITORY }}:.*@ \
-        image: ${{ env.DOCKER_REGISTRY }}/${{ env.DOCKER_REPOSITORY }}:${{ env.IMAGE_TAG }}@g" deployment.yml
+        image: ${{ env.DOCKER_REGISTRY }}/${{ env.DOCKER_REPOSITORY }}:${{ env.IMAGE_TAG }}@g" deployment.yaml
 
     - name: Commit and Push
       run: |
